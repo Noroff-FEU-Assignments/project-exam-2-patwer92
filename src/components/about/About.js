@@ -21,8 +21,8 @@ function About() {
             quibusdam error excepturi temporibus. Animi ratione maxime corrupti.
           </p>
 
-          <div className="about__values-block b1">
-            <img src="images/values-img.jpg" className="about__image" />
+          <div className="about__values-block">
+            <img src="images/values-img.jpg" alt="" className="about__image" />
             <div className="about__content">
               <h2 className="about__title">Våre verdier</h2>
               <p className="about__text">
@@ -34,8 +34,8 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="about__team-block b2">
-            <img src="images/team-img.jpg" className="about__image d-lg-none" />
+          <div className="about__team-block">
+            <img src="images/team-img.jpg" alt="" className="about__image d-lg-none" />
             <div className="about__content">
               <h2 className="about__title">Litt om vårt team</h2>
               <p className="about__text">
@@ -47,7 +47,7 @@ function About() {
                 deserunt.
               </p>
             </div>
-            <img src="images/team-img.jpg" className="about__image d-none d-lg-block" />
+            <img src="images/team-img.jpg" alt="" className="about__image d-none d-lg-block" />
           </div>
         </main>
       </Container>
