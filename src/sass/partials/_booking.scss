@@ -1,0 +1,95 @@
+.booking {
+  margin-top: 0;
+  padding: 0 !important;
+
+  .booking__title {
+    font-size: $regular-font;
+    font-weight: 200;
+    padding: 0.3rem 0.4rem !important;
+  }
+
+  .booking__body {
+    padding: 1.5rem !important;
+  }
+
+  .booking__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .booking__heading {
+      font-size: $small-font;
+      font-weight: 200;
+    }
+
+    .booking__calendar {
+      margin-bottom: 1rem !important;
+
+      .booking__datepicker {
+        height: 3.5rem;
+        color: $darkgrey-color !important;
+        border: 1px solid $grey-color;
+        border-radius: 0.2rem;
+      }
+
+      .react-datepicker__time-container {
+        width: auto !important;
+
+        .react-datepicker__header--time {
+          padding-bottom: 32px !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+
+          @media (max-width: $xl-breakpoint) {
+            padding-bottom: 33px !important;
+          }
+        }
+
+        .react-datepicker__time-box {
+          width: auto !important;
+        }
+      }
+    }
+
+    .booking__datepicker {
+      padding-left: 0.5rem;
+      height: 3rem;
+      width: 13.5rem;
+
+      @media (max-width: $mid-breakpoint) {
+        width: 100%;
+      }
+    }
+
+    .booking__info {
+      // width: 25rem;
+      width: 100%;
+
+      @media (max-width: $large-breakpoint) {
+        width: 100%;
+      }
+
+      .booking__input {
+        color: #a4a9b2 !important;
+      }
+    }
+
+    .booking__form-footer {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+
+      .booking__button {
+        width: 12.25rem !important;
+        height: 3.5rem !important;
+        background: $green-color !important;
+
+        &:hover {
+          background: $tertiary-color !important;
+          color: $white-color !important;
+        }
+      }
+    }
+  }
+}

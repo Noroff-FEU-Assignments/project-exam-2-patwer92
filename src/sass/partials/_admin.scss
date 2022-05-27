@@ -1,0 +1,281 @@
+.admin {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  .admin__title {
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    font-family: $primary-font;
+    font-size: $xl-font;
+    text-align: center;
+
+    @media (max-width: $mid-breakpoint) {
+      padding: 0 1rem !important;
+      font-size: $mid-font;
+      top: 3rem;
+    }
+  }
+
+  .admin__wrapper {
+    margin: 12rem 0 5rem 0;
+    width: 100%;
+
+    .admin__tabs {
+      .nav-tabs {
+        border-bottom: 0;
+      }
+      .nav-link.active {
+        background: $lightblue-color;
+        color: $darkblue-color;
+      }
+      .nav-link {
+        padding: 0.5rem 2rem;
+        margin-right: 1px;
+        border-top-right-radius: 0.25rem;
+        border-top-left-radius: 0.25rem;
+        border: none;
+        background: $blue-color;
+        color: $black-color;
+        font-size: $small-font;
+        font-weight: 600;
+      }
+    }
+
+    .admin__accordion {
+      .accordion-item {
+        border: none;
+
+        .accordion-button.collapsed {
+          font-size: $small-font;
+          background-color: $blue-color;
+          color: $black-color;
+          font-weight: 600;
+        }
+
+        .accordion-button:not(.collapsed) {
+          font-size: $small-font;
+          background-color: $lightblue-color;
+          color: $darkblue-color;
+          font-weight: 600;
+        }
+
+        .accordion-body {
+          padding: 0;
+        }
+      }
+    }
+
+    .admin__content {
+      height: 65vh;
+      border: none;
+      border-bottom-left-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+      background: $lightblue-color;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      overflow: auto;
+
+      @media (max-width: $mid-breakpoint) {
+        border-radius: unset;
+      }
+
+      h1 {
+        padding: 2rem 2.1rem 0 !important;
+
+        @media (max-width: $mid-breakpoint) {
+          padding: 2rem 1.25rem 0;
+        }
+      }
+
+      .admin__form {
+        margin-top: 2rem;
+
+        .admin__form-heading {
+          font-size: $regular-font;
+
+          @media (max-width: $mid-breakpoint) {
+            font-size: $small-font;
+          }
+        }
+
+        .admin__form-label {
+          font-size: $regular-font;
+
+          @media (max-width: $mid-breakpoint) {
+            font-size: $small-font;
+          }
+        }
+
+        .admin__form-input {
+          color: $darkgrey-color;
+        }
+
+        .admin__upload {
+          width: 25rem;
+
+          @media (max-width: $mid-breakpoint) {
+            width: 100%;
+          }
+        }
+        .admin__form-btn {
+          height: 3rem !important;
+          background: $blue-color !important;
+
+          &:hover {
+            background: $secondary-color !important;
+            color: $white-color !important;
+          }
+        }
+      }
+
+      .admin__bookings,
+      .admin__contacts {
+        padding: 2rem 1.5rem 1rem;
+        width: 100%;
+        display: grid;
+
+        @media (max-width: $mid-breakpoint) {
+          padding: 2rem 0.5rem 1rem;
+        }
+      }
+
+      .admin__bookings {
+        grid-template-columns: repeat(6, 1fr);
+
+        @media (max-width: $xl-breakpoint) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: $mid-breakpoint) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .bookings--title {
+          border-top-left-radius: 0.5rem;
+          border-bottom-left-radius: 0.5rem;
+
+          @media (max-width: $xl-breakpoint) {
+            border-bottom-left-radius: 0;
+          }
+        }
+
+        .bookings--message {
+          border-top-right-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
+
+          @media (max-width: $xl-breakpoint) {
+            border-top-right-radius: 0;
+          }
+        }
+
+        @media (max-width: $xl-breakpoint) {
+          .bookings--email {
+            border-top-right-radius: 0.5rem;
+          }
+
+          .bookings--address {
+            border-bottom-left-radius: 0.5rem;
+          }
+        }
+
+        @media (max-width: $mid-breakpoint) {
+          .bookings--email {
+            border-top-right-radius: 0;
+          }
+
+          .bookings--address {
+            border-bottom-left-radius: 0;
+          }
+
+          .bookings--name {
+            border-top-right-radius: 0.5rem;
+          }
+
+          .bookings--date {
+            border-bottom-left-radius: 0.5rem;
+          }
+        }
+      }
+
+      .admin__contacts {
+        grid-template-columns: repeat(4, 1fr);
+
+        @media (max-width: $mid-breakpoint) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .contacts--first-name {
+          border-top-left-radius: 0.5rem;
+          border-bottom-left-radius: 0.5rem;
+
+          @media (max-width: $mid-breakpoint) {
+            border-bottom-left-radius: 0;
+          }
+        }
+
+        .contacts--message {
+          border-top-right-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
+
+          @media (max-width: $mid-breakpoint) {
+            border-top-right-radius: 0;
+          }
+        }
+
+        @media (max-width: $mid-breakpoint) {
+          .contacts--last-name {
+            border-top-right-radius: 0.5rem;
+          }
+          .contacts--email {
+            border-bottom-left-radius: 0.5rem;
+          }
+        }
+      }
+
+      .admin__grid {
+        padding: 1.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: $white-color;
+
+        @media (max-width: $mid-breakpoint) {
+          padding: 1.5rem 0.5rem;
+        }
+
+        .admin__grid-heading {
+          color: $darkgrey-color;
+          font-weight: 700;
+          font-size: $small-font;
+
+          @media (max-width: $mid-breakpoint) {
+            font-size: $xs-font;
+          }
+        }
+
+        .admin__grid-text {
+          font-size: $xs-font;
+
+          @media (max-width: $mid-breakpoint) {
+            font-size: $xxs-font;
+          }
+
+          span {
+            padding-right: 0.25rem;
+          }
+        }
+        .admin__grid-location {
+          margin-top: -1rem;
+          display: flex;
+        }
+      }
+    }
+  }
+}

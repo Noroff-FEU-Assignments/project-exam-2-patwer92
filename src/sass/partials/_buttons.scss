@@ -1,0 +1,47 @@
+.btn {
+  width: 12rem;
+  padding: 0.8rem 0 !important;
+  color: $black-color !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border: none !important;
+  border-radius: 1rem !important;
+  font-family: $secondary-font !important;
+  font-size: $small-font !important;
+  font-weight: 600 !important;
+  transition: 200ms ease-in-out !important;
+
+  @media (max-width: $mid-breakpoint) {
+    padding: 0.75rem 0 !important;
+    width: 9rem;
+    font-size: 14px !important;
+  }
+}
+
+.btn--primary {
+  background: $lightpink-color !important;
+
+  &:hover {
+    background: $primary-color !important;
+    color: $white-color !important;
+  }
+}
+
+.btn--secondary {
+  background: $lightblue-color !important;
+
+  &:hover {
+    background: $secondary-color !important;
+    color: $white-color !important;
+  }
+}
+
+.btn--tertiary {
+  background: $lightgreen-color !important;
+
+  &:hover {
+    background: $tertiary-color !important;
+    color: $white-color !important;
+  }
+}

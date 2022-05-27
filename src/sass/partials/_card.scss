@@ -1,0 +1,182 @@
+.card {
+  background: transparent !important;
+  height: auto !important;
+  width: 100%;
+  margin: 10rem 0;
+  border: none !important;
+
+  .card__wrapper {
+    position: relative;
+    padding: 5rem 0 !important;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(144, 203, 241, 1) 0%, rgba(251, 224, 234, 1) 100%);
+    border-radius: 0.5rem;
+
+    @media (max-width: $mid-breakpoint) {
+    }
+
+    .card__heading-block {
+      position: absolute;
+      top: 0;
+      margin-top: -3rem;
+      padding: 1rem;
+      background: $primary-color;
+      border-radius: 0.25rem;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+      .card__heading {
+        font-family: $primary-font;
+        font-size: $mid-font;
+        text-align: center;
+        line-height: 1.5;
+        color: $white-color;
+
+        @media (max-width: $mid-breakpoint) {
+          font-size: 26px;
+        }
+      }
+    }
+
+    .card__image-block {
+      background: $lightgrey-color;
+      margin: 2rem 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25rem;
+      height: 35rem;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      overflow: hidden;
+
+      @media (max-width: $mid-breakpoint) {
+        width: 19rem;
+      }
+
+      &:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+        .card__image {
+          transform: scale(1.25);
+        }
+
+        .card__caption {
+          bottom: 0;
+        }
+      }
+
+      .card__title {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 10px;
+        margin: 0;
+        padding: 0 1rem;
+        color: $black-color;
+        font-size: $regular-font;
+        font-weight: 200;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .card__image {
+        object-fit: cover;
+        height: 80%;
+        width: 100%;
+        transition: 0.25s;
+      }
+
+      .card__caption {
+        position: absolute;
+        bottom: -12.5%;
+        left: 0;
+        width: 100%;
+        padding: 14px 30px;
+        background-color: rgba(#000, 0.75);
+        box-shadow: 0 0 20px rgba(#000, 0.4);
+        color: $white-color;
+        line-height: 1;
+        transition: 0.25s;
+
+        @media (max-width: $mid-breakpoint) {
+          padding: 0;
+          bottom: 0;
+        }
+
+        .card__caption-title {
+          margin: 0;
+          padding: 0px 0 10px 0;
+
+          @media (max-width: $mid-breakpoint) {
+            padding: 10px 0 10px 20px;
+          }
+        }
+
+        .card__caption-snippet {
+          font-size: 14px;
+          line-height: 1.75;
+        }
+
+        .card__link-wrapper {
+          height: 3.5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          @media (max-width: $mid-breakpoint) {
+            justify-content: space-around;
+          }
+
+          .card__button {
+            position: relative;
+            margin: 0 !important;
+            padding: 10px 20px !important;
+            width: 9rem !important;
+            font-size: 14px !important;
+          }
+
+          .card__link {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: $xxs-font !important;
+            text-align: center;
+            line-height: 1.3;
+            color: $white-color;
+            transition: 400ms ease-in-out;
+
+            p {
+              &:hover {
+                text-decoration: underline !important;
+              }
+            }
+
+            .card__icon {
+              margin-top: -1.2rem;
+              width: 2.5rem;
+              color: $pink-color;
+              transition: 200ms ease-in-out;
+
+              @media (max-width: $mid-breakpoint) {
+                width: 2rem;
+              }
+
+              &:hover {
+                color: $primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

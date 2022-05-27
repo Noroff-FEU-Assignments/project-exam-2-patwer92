@@ -1,0 +1,45 @@
+.nav {
+  background: $lightgrey-color !important;
+
+  .nav__link {
+    margin: 1rem 0;
+    font-size: $small-font;
+    font-weight: 600;
+    color: $black-color;
+    transition: 200ms ease-in-out;
+
+    @media (max-width: $mid-breakpoint) {
+      margin: 0.5rem 0;
+    }
+
+    &:hover {
+      color: $darkgrey-color !important;
+    }
+    &:active {
+      color: $primary-color !important;
+    }
+
+    button {
+      background: none;
+      border: none;
+      font-size: $small-font;
+      font-weight: 600;
+      color: $black-color;
+      transition: 200ms;
+      &:hover {
+        color: $darkgrey-color;
+      }
+    }
+  }
+
+  .nav__heading {
+    margin-top: 5rem;
+    font-size: $large-font;
+    font-family: $primary-font;
+    color: $primary-color;
+
+    @media (max-width: $mid-breakpoint) {
+      margin-top: 3.5rem;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.infobox--treatments {
+  background: $lightblue-color;
+}
+
+.infobox--products {
+  background: $lightpink-color;
+}
+
+.infobox {
+  margin-bottom: 10rem;
+  height: 75vh;
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $mid-breakpoint) {
+    margin-bottom: 5rem;
+  }
+
+  .infobox__block {
+    height: 20vh;
+    width: 52%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media (max-width: $large-breakpoint) {
+      width: 80%;
+    }
+
+    @media (max-width: $mid-breakpoint) {
+      width: 90%;
+    }
+  }
+
+  .infobox__icon {
+    margin: 0 3rem 1.5rem 0;
+    width: 4rem;
+    height: 4rem;
+
+    @media (max-width: $large-breakpoint) {
+      margin: 0 2.5rem 1.5rem 0;
+    }
+
+    @media (max-width: $mid-breakpoint) {
+      margin: 0 1.5rem 1.5rem 0;
+    }
+  }
+
+  .infobox__text {
+    font-size: $regular-font;
+    font-weight: 200;
+
+    @media (max-width: $large-breakpoint) {
+      font-size: $small-font;
+    }
+
+    @media (max-width: $mid-breakpoint) {
+      font-size: $xs-font;
+    }
+  }
+}

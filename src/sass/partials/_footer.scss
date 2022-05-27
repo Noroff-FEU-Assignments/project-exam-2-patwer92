@@ -1,0 +1,106 @@
+footer {
+  position: relative;
+  min-height: auto;
+  width: 100%;
+  background: $green-color;
+
+  .footer__copyright {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: $xs-font;
+    text-align: center;
+
+    @media (max-width: $mid-breakpoint) {
+      font-size: $xxs-font;
+    }
+  }
+
+  .footer {
+    padding: 7rem 0;
+    width: 70% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $mid-breakpoint) {
+      flex-direction: column;
+      padding: 5rem 0;
+    }
+
+    .footer__item {
+      height: 12rem;
+      width: 8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      @media (max-width: $mid-breakpoint) {
+        margin: 2rem 0;
+        align-items: center;
+      }
+
+      .footer__title {
+        margin-bottom: 2rem;
+        font-size: $small-font !important;
+        font-weight: 800;
+        color: $secondary-color;
+      }
+
+      .footer__link {
+        color: $black-color;
+        font-size: $small-font;
+        line-height: 2;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+          color: $grey-color;
+        }
+      }
+
+      .footer__icon-wrapper {
+        width: 8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer__instagram-icon,
+        .footer__facebook-icon {
+          height: 3.25rem;
+          width: 3.25rem;
+          border: 2px solid black;
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: scale(1) !important;
+          color: $black-color;
+
+          .footer__icon {
+            width: 1.75rem;
+            border: none !important;
+            transition: 200ms ease-in-out;
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+        .footer__instagram-icon {
+          transition: 200ms ease-in-out;
+          &:hover {
+            border: 2px solid #ef5c5c !important;
+            color: #ef5c5c;
+          }
+        }
+        .footer__facebook-icon {
+          transition: 200ms ease-in-out;
+          &:hover {
+            border: 2px solid #3c8dde !important;
+            color: #3c8dde;
+          }
+        }
+      }
+    }
+  }
+}

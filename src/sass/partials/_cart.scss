@@ -1,0 +1,46 @@
+.cart {
+  background: $lightgrey-color !important;
+
+  .cart__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .cart__heading {
+      font-family: $primary-font;
+      font-size: $mid-font;
+    }
+  }
+
+  .cart__container {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .cart__icon {
+      margin-bottom: 2rem;
+      width: 10rem;
+      height: 8rem;
+      color: $pink-color;
+    }
+
+    .cart__text {
+      font-size: $regular-font;
+      font-weight: 600;
+    }
+  }
+
+  .cart__button {
+    margin-bottom: 2rem;
+    width: 80%;
+    background: $pink-color;
+
+    &:hover {
+      background: $primary-color;
+      color: $white-color !important;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.contact {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  .contact__title {
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    font-family: $primary-font;
+    font-size: $xl-font;
+    text-align: center;
+
+    @media (max-width: $mid-breakpoint) {
+      padding: 0 1rem !important;
+      font-size: $mid-font;
+      top: 3rem;
+    }
+  }
+
+  .contact__content {
+    margin: 13rem 0 6rem 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media (max-width: $xl-breakpoint) {
+      margin: 10rem 0 6rem 0;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (max-width: $mid-breakpoint) {
+      margin: 6rem 0;
+    }
+
+    .contact__form-container {
+      padding: 2rem;
+      width: 50rem;
+      border-radius: 0.5rem;
+      background: $blue-color;
+
+      @media (max-width: $large-breakpoint) {
+        width: 100%;
+      }
+
+      @media (max-width: $mid-breakpoint) {
+        padding: 2rem 1rem;
+      }
+
+      .contact__form {
+        width: 100%;
+
+        .contact__button {
+          @media (max-width: $mid-breakpoint) {
+            width: 100% !important;
+          }
+        }
+
+        .contact__success {
+          padding: 1.5rem 0;
+          width: auto;
+          border-radius: 0.25rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $lightgreen-color;
+
+          .contact__success-msg {
+            text-align: center;
+            margin: 0 !important;
+            font-weight: 600;
+            color: $darkgreen-color;
+          }
+        }
+      }
+    }
+
+    .contact__text-container {
+      height: 35rem;
+      margin-right: 2rem;
+
+      @media (max-width: $xl-breakpoint) {
+        margin-bottom: 2rem;
+        height: auto;
+        height: 100%;
+      }
+
+      .contact__text {
+        margin-top: 4rem;
+        font-size: $small-font;
+        color: $black-color;
+
+        @media (max-width: $large-breakpoint) {
+          margin-top: 2rem;
+          font-size: $xs-font;
+        }
+
+        .contact__link {
+          color: $black-color;
+          text-decoration: underline !important;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.hero {
+  position: relative;
+  width: 100% !important;
+  height: 90vh;
+
+  .hero__title {
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    font-family: $primary-font;
+    font-size: $xl-font;
+    text-align: center;
+
+    @media (max-width: $mid-breakpoint) {
+      padding: 0 1rem !important;
+      font-size: $mid-font;
+      top: 3rem;
+    }
+  }
+
+  .hero__subtext {
+    position: absolute;
+    top: 12rem;
+    padding: 0 1.5rem;
+    width: 100%;
+    font-family: $secondary-color;
+    font-size: $mid-font;
+    text-align: center;
+
+    @media (max-width: $mid-breakpoint) {
+      font-size: $small-font;
+      top: 7rem;
+    }
+  }
+
+  .hero__image {
+    object-fit: cover;
+    object-position: 50% 30%;
+    width: 100%;
+    height: 100%;
+  }
+}

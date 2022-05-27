@@ -1,0 +1,105 @@
+// GLOBAL
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background: $lightgrey-color;
+  border-radius: 0.1em;
+  margin-block: 0.4em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $grey-color;
+  border-radius: 100vw;
+
+  &:hover {
+    background: $darkgrey-color;
+  }
+}
+
+@supports (scrollbar-color: grey lightgrey) {
+  * {
+    scrollbar-color: $grey-color $lightgrey-color;
+    scrollbar-width: thin;
+    scroll-margin-block: 1em;
+  }
+}
+
+/* BODY STYLING */
+
+body {
+  background: $lightgrey-color !important;
+  font-family: $secondary-font !important;
+  color: $black-color !important;
+  min-height: auto;
+
+  ::-webkit-scrollbar-track {
+    background: $lightblue-color;
+  }
+
+  @supports (scrollbar-color: grey lightgrey) {
+    * {
+      scrollbar-color: $grey-color $lightblue-color;
+    }
+  }
+}
+
+.container-fluid {
+  width: 95% !important;
+}
+
+/* GLOBAL TEXT */
+
+a {
+  text-decoration: none !important;
+}
+
+h1 {
+  padding-top: 4rem !important;
+}
+
+h1,
+.main__heading {
+  font-size: $mid-font !important;
+  text-align: center;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+  @media (max-width: $mid-breakpoint) {
+    font-size: $small-font !important;
+  }
+}
+
+.main__text {
+  padding-top: 2.5rem;
+  font-size: $small-font;
+  text-align: center;
+  line-height: 1;
+
+  @media (max-width: $mid-breakpoint) {
+    padding-top: 2.5rem;
+    font-size: $xs-font;
+    text-align: left;
+  }
+}
+
+/* API HANDLING */
+
+.api__loading,
+.api__error {
+  margin: 5rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ERROR TEXT */
+
+.form-error,
+.api__error {
+  color: red;
+}
