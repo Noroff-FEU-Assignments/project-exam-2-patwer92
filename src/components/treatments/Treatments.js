@@ -40,6 +40,9 @@ function Treatments() {
           infoText2="Vi bruker kun økologiske produkter i våre behandlinger."
           infoIcon3="images/face-grin-beam-solid.svg"
           infoText3="100% Fornøydgaranti. Er du ikke fornøyd får du pengene tilbake."
+          altText1="Tommel opp ikon"
+          altText2="Blad ikon"
+          altText3="Stort smil emoji ikon"
         />
       </Container>
 

@@ -40,6 +40,9 @@ function Products() {
           infoText2="Våre merker leverer kun de beste kvalitetsvarene som markedet har å by på."
           infoIcon3="images/money-check-solid.svg"
           infoText3="90 dagers åpent kjøp."
+          altText1="Sirkel hake ikon"
+          altText2="Diagram med stjerne ikon"
+          altText3="Bankkort ikon"
         />
       </Container>
 
