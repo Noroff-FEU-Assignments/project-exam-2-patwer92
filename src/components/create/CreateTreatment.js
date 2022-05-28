@@ -18,6 +18,7 @@ const schema = yup.object().shape({
 export default function CreateTreatment() {
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState(null);
+  const [status, setStatus] = useState(undefined);
 
   const [auth] = useContext(AuthContext);
 
@@ -58,7 +59,9 @@ export default function CreateTreatment() {
       const response = await fetch(url, options);
       const json = await response.json();
       console.log(json);
+      setStatus({ type: "success" });
     } catch (error) {
+      setStatus({ type: "error", error });
       setServerError(error.toString());
     } finally {
       setSubmitting(false);
@@ -121,27 +124,24 @@ export default function CreateTreatment() {
               />
               {errors.image && <FormError>{errors.image.message}</FormError>}
             </Form.Group>
-
-            <Button className="btn btn--secondary admin__form-btn my-5" type="submit">
-              {submitting ? "LASTER OPP..." : "LAST OPP"}
-            </Button>
+            <div className="admin__form-footer">
+              <Button className="btn btn--secondary admin__form-btn my-5" type="submit">
+                {submitting ? "LASTER OPP..." : "LAST OPP"}
+              </Button>
+              {status?.type === "success" && (
+                <div className="admin__success">
+                  <p className="admin__success-msg">Behandling er lastet opp</p>
+                </div>
+              )}
+              {status?.type === "error" && (
+                <div className="admin__error">
+                  <p className="admin__error-msg">Behandling ble ikke lastet opp</p>
+                </div>
+              )}
+            </div>
           </fieldset>
         </Form>
       </Container>
     </>
   );
 }
-
-// const formData = new FormData();
-// formData.append("image", data.image[0]);
-// formData.append("title", JSON.stringify({ title: data.title }));
-// formData.append("price", JSON.stringify({ price: data.price }));
-// formData.append("description", JSON.stringify({ description: data.description }));
-
-// {
-//     headers: { "Content-type": "multipart/form-data" },
-//   }
-
-//   const response = await http.post("treatments", FormData, {
-//     headers: { "Content-type": "multipart/form-data" },
-//   });

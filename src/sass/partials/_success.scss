@@ -9,16 +9,29 @@
     font-size: $xl-font;
     font-family: $primary-font;
     text-align: center;
+
+    @media (max-width: $mid-breakpoint) {
+      font-size: $mid-font;
+    }
   }
 
   .success__icon {
     margin: 4rem 0 2rem;
     font-size: 10rem;
     color: $tertiary-color;
+
+    @media (max-width: $mid-breakpoint) {
+      margin: 3rem 0 2rem;
+      font-size: 8rem;
+    }
   }
 
   .success__text {
-    margin-bottom: 5rem;
+    margin: 1rem 0 5rem;
+
+    @media (max-width: $mid-breakpoint) {
+      margin: 1rem 0 2.5rem;
+    }
 
     .success__link {
       text-decoration: underline !important;
@@ -33,5 +46,9 @@
   .success__button {
     margin-bottom: 10rem;
     width: 20rem;
+
+    @media (max-width: $large-breakpoint) {
+      margin-bottom: 5rem;
+    }
   }
 }

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import Spinner from "react-bootstrap/Spinner";
 import { format, utcToZonedTime } from "date-fns-tz";
 import { BASE_URL } from "../../constants/api";
 import AdminBookingItem from "./AdminBookingItem";
+import Loading from "../common/Loading";
 
 export default function AdminBookingList() {
   const [bookings, setBookings] = useState([]);
@@ -31,13 +31,7 @@ export default function AdminBookingList() {
   }, []);
 
   if (loading) {
-    return (
-      <div className="api__loading">
-        <Spinner animation="border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-      </div>
-    );
+    return <Loading />;
   }
 
   if (error) {

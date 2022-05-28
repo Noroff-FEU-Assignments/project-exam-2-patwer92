@@ -16,6 +16,8 @@ export default function Search() {
   const [APIData, setAPIData] = useState([]);
   const [filteredResults, setFilteredResults] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+  const [text, setText] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
 
   const url = `${BASE_URL}treatments`;
 
@@ -24,6 +26,24 @@ export default function Search() {
       setAPIData(response.data);
     });
   }, []);
+
+  const onChangeHandler = (text) => {
+    let matches = [];
+    if (text.length > 1) {
+      matches = APIData.filter((item) => {
+        const regex = new RegExp(`${text}`, "gi");
+        return item.title.match(regex);
+      });
+    }
+    console.log("matches", matches);
+    setSuggestions(matches);
+    setText(text);
+  };
+
+  const onSuggestHandler = (text) => {
+    setText(text);
+    setSuggestions([]);
+  };
 
   const searchItems = (searchValue) => {
     setSearchInput(searchValue);
@@ -57,13 +77,30 @@ export default function Search() {
                 type="text"
                 name="search"
                 id="search"
-                placeholder="Søk behandlinger ..."
+                value={text}
+                placeholder="Søk alle behandlinger ..."
                 className="search__input"
-                onChange={(e) => searchItems(e.target.value)}
+                onChange={(e) => {
+                  onChangeHandler(e.target.value);
+                  searchItems(e.target.value);
+                }}
               />
             </Form>
+            <div className="search__suggestions">
+              {suggestions &&
+                suggestions.map((suggestion, i) => (
+                  <div
+                    key={i}
+                    onClick={() => {
+                      onSuggestHandler(suggestion.title);
+                    }}
+                  >
+                    {suggestion.title}
+                  </div>
+                ))}
+            </div>
             <div className="search__container">
-              {searchInput.length > 0
+              {searchInput.length > 2
                 ? filteredResults.map((item) => {
                     return (
                       <div className="search__block">
@@ -71,10 +108,10 @@ export default function Search() {
                         <div className="search__content">
                           <h3 className="search__title">{item.title}</h3>
                           <p className="search__price">Kr {item.price},-</p>
-                          <p className="search__text">{item.text}</p>
                           <Link
                             to={`treatment/details/${item.id}`}
                             className="search__button btn btn--secondary mb-4"
+                            onClick={handleClose}
                           >
                             LES MER
                           </Link>
@@ -90,3 +127,22 @@ export default function Search() {
     </>
   );
 }
+
+// APIData.map((item) => {
+//                     return (
+//                       <div className="search__block">
+//                         <img src={item.image.url} alt="" className="search__image" />
+//                         <div className="search__content">
+//                           <h3 className="search__title">{item.title}</h3>
+//                           <p className="search__price">Kr {item.price},-</p>
+//                           <Link
+//                             to={`treatment/details/${item.id}`}
+//                             className="search__button btn btn--secondary mb-4"
+//                             onClick={handleClose}
+//                           >
+//                             LES MER
+//                           </Link>
+//                         </div>
+//                       </div>
+//                     );
+//                   })

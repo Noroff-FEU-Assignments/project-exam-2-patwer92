@@ -62,21 +62,34 @@
           }
         }
 
-        .contact__success {
+        .contact__success,
+        .contact__error {
           padding: 1.5rem 0;
           width: auto;
           border-radius: 0.25rem;
           display: flex;
           justify-content: center;
           align-items: center;
-          background: $lightgreen-color;
 
-          .contact__success-msg {
+          .contact__success-msg,
+          .contact__error-msg {
             text-align: center;
             margin: 0 !important;
             font-weight: 600;
-            color: $darkgreen-color;
           }
+        }
+
+        .contact__success {
+          background: $lightgreen-color;
+
+          .contact__success-msg {
+            color: $success-color;
+          }
+        }
+
+        .contact__error {
+          background: $lightpink-color;
+          color: $danger-color;
         }
       }
     }

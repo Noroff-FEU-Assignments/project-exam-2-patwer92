@@ -42,7 +42,7 @@ function Treatments() {
           infoText3="100% Fornøydgaranti. Er du ikke fornøyd får du pengene tilbake."
           altText1="Tommel opp ikon"
           altText2="Blad ikon"
-          altText3="Stort smil emoji ikon"
+          altText3="Stort smil emoji-ikon"
         />
       </Container>
 

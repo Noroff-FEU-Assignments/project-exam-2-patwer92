@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Spinner from "react-bootstrap/Spinner";
 import { BASE_URL } from "../../constants/api";
+import Loading from "../common/Loading";
 import ProductItem from "./ProductItem";
 
 export default function ProductsList() {
@@ -30,13 +30,7 @@ export default function ProductsList() {
   }, []);
 
   if (loading) {
-    return (
-      <div className="api__loading">
-        <Spinner animation="border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-      </div>
-    );
+    return <Loading />;
   }
 
   if (error) {

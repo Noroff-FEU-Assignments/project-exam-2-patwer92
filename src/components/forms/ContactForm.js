@@ -28,7 +28,8 @@ const schema = yup.object().shape({
 function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState(null);
-  const [status, setStatus] = useState("");
+
+  const [status, setStatus] = useState(undefined);
 
   const http = useAxios();
 
@@ -48,25 +49,16 @@ function ContactForm() {
 
     e.preventDefault();
 
-    const error = false;
-
     try {
       const response = await http.post("contacts", data);
       console.log("response", response.data);
+      setStatus({ type: "success" });
     } catch (error) {
-      console.log("error", error);
+      setStatus({ type: "error", error });
       setServerError(error.toString());
     } finally {
       setSubmitting(false);
     }
-
-    if (error) {
-      console.log("wtf error");
-      setStatus("error");
-      return;
-    }
-
-    setStatus("success");
   }
 
   return (
@@ -106,17 +98,17 @@ function ContactForm() {
           <Button className="contact__button btn btn--secondary mt-4" type="submit">
             {submitting ? "SENDER ..." : "SEND"}
           </Button>
-          <div>
-            {status === "success" ? (
-              <div className="contact__success my-3">
-                <p className="contact__success-msg">
-                  Meldingen ble sendt! Takk for din forespørsel.
-                </p>
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
+
+          {status?.type === "success" && (
+            <div className="contact__success my-3">
+              <p className="contact__success-msg">Meldingen ble sendt! Takk for din forespørsel.</p>
+            </div>
+          )}
+          {status?.type === "error" && (
+            <div className="contact__error my-3">
+              <p className="contact__error-msg">Meldingen ble ikke sendt. Vennligst prøv igjen.</p>
+            </div>
+          )}
         </fieldset>
       </form>
     </>

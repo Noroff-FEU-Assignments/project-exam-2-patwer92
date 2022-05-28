@@ -16,10 +16,11 @@ import ProductDetails from "../details/ProductDetails";
 import About from "../about/About";
 import Contact from "../contact/Contact";
 import Login from "../login/Login";
-import BookingSuccess from "../success/BookingSuccess";
+import Success from "../success/Success";
 import Dashboard from "../dashboard/Dashboard";
 import OffcanvasNav from "./OffcanvasNav";
 import Search from "./Search";
+import Wishlist from "../wishlist/Wishlist";
 
 function Navigation() {
   const [auth] = useContext(AuthContext);
@@ -51,7 +52,7 @@ function Navigation() {
             </div>
             <Search />
             <Cart />
-            <Link to="/contact">
+            <Link to="/wishlist">
               <FontAwesomeIcon icon={faHeart} className="header__icon" />
             </Link>
             <Link to="/login">
@@ -75,7 +76,8 @@ function Navigation() {
         <Route path="/contact" component={Contact} />
         <Route path="/login" component={Login} />
         <Route path="/dashboard" component={Dashboard} />
-        <Route path="/booking-success" component={BookingSuccess} />
+        <Route path="/booking-success" component={Success} />
+        <Route path="/wishlist" component={Wishlist} />
       </Switch>
     </ScrollToTop>
   );

@@ -36,20 +36,14 @@ body {
   font-family: $secondary-font !important;
   color: $black-color !important;
   min-height: auto;
-
-  ::-webkit-scrollbar-track {
-    background: $lightblue-color;
-  }
-
-  @supports (scrollbar-color: grey lightgrey) {
-    * {
-      scrollbar-color: $grey-color $lightblue-color;
-    }
-  }
 }
 
 .container-fluid {
   width: 95% !important;
+
+  @media (max-width: $small-breakpoint) {
+    width: 100% !important;
+  }
 }
 
 /* GLOBAL TEXT */
@@ -74,13 +68,13 @@ h1,
 }
 
 .main__text {
-  padding-top: 2.5rem;
+  padding-top: 2rem;
   font-size: $small-font;
   text-align: center;
-  line-height: 1;
+  line-height: 1.5;
 
   @media (max-width: $mid-breakpoint) {
-    padding-top: 2.5rem;
+    padding-top: 1rem;
     font-size: $xs-font;
     text-align: left;
   }

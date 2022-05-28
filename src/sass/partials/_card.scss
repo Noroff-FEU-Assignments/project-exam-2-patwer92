@@ -145,7 +145,6 @@
           .card__link {
             height: 100%;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             font-size: $xxs-font !important;
@@ -154,20 +153,25 @@
             color: $white-color;
             transition: 400ms ease-in-out;
 
+            @media (max-width: $mid-breakpoint) {
+              width: 5rem;
+            }
+
             p {
+              margin: 0 0.5rem 0 !important;
               &:hover {
                 text-decoration: underline !important;
               }
             }
 
             .card__icon {
-              margin-top: -1.2rem;
-              width: 2.5rem;
+              margin-bottom: 0.2rem;
+              font-size: 2rem;
               color: $pink-color;
               transition: 200ms ease-in-out;
 
               @media (max-width: $mid-breakpoint) {
-                width: 2rem;
+                margin-right: 1.5rem;
               }
 
               &:hover {

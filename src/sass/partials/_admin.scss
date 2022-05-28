@@ -25,6 +25,16 @@
     margin: 12rem 0 5rem 0;
     width: 100%;
 
+    ::-webkit-scrollbar-track {
+      background: $lightblue-color;
+    }
+
+    @supports (scrollbar-color: grey lightgrey) {
+      * {
+        scrollbar-color: $grey-color $lightblue-color;
+      }
+    }
+
     .admin__tabs {
       .nav-tabs {
         border-bottom: 0;
@@ -124,13 +134,50 @@
             width: 100%;
           }
         }
-        .admin__form-btn {
-          height: 3rem !important;
-          background: $blue-color !important;
 
-          &:hover {
-            background: $secondary-color !important;
-            color: $white-color !important;
+        .admin__form-footer {
+          display: flex;
+          align-items: center;
+
+          .admin__form-btn {
+            margin-right: 2rem;
+            width: 9rem;
+            background: $blue-color !important;
+
+            &:hover {
+              background: $secondary-color !important;
+              color: $white-color !important;
+            }
+          }
+
+          .admin__success,
+          .admin__error {
+            border-radius: 0.2rem;
+
+            @media (max-width: $mid-breakpoint) {
+              width: 9rem;
+            }
+
+            .admin__success-msg,
+            .admin__error-msg {
+              padding: 1rem 0.75rem;
+              margin: 0 !important;
+              text-align: center;
+            }
+          }
+
+          .admin__success {
+            background: $lightgreen-color;
+            .admin__success-msg {
+              color: $success-color;
+            }
+          }
+
+          .admin__error {
+            background: $lightpink-color;
+            .admin__error-msg {
+              color: $danger-color;
+            }
           }
         }
       }

@@ -61,7 +61,7 @@ function Footer() {
             <Link to="/contact" className="footer__link">
               Personvern
             </Link>
-            <Link tof="/contact" className="footer__link">
+            <Link to="/contact" className="footer__link">
               Kjøpsvilkår
             </Link>
             <Link to="/contact" className="footer__link">

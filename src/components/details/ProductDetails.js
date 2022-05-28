@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import Spinner from "react-bootstrap/Spinner";
 import { BASE_URL } from "../../constants/api";
 import ProductDetailsItem from "./ProductDetailsItem";
 import Footer from "../layout/Footer";
+import Loading from "../common/Loading";
 
 function ProductDetails() {
   const [products, setProduct] = useState(null);
@@ -45,13 +45,7 @@ function ProductDetails() {
   );
 
   if (loading) {
-    return (
-      <div className="api__loading">
-        <Spinner animation="border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-      </div>
-    );
+    return <Loading />;
   }
 
   if (error) {
