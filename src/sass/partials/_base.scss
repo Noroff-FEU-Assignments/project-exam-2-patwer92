@@ -40,10 +40,6 @@ body {
 
 .container-fluid {
   width: 95% !important;
-
-  @media (max-width: $small-breakpoint) {
-    width: 100% !important;
-  }
 }
 
 /* GLOBAL TEXT */
