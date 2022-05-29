@@ -21,6 +21,10 @@ import Dashboard from "../dashboard/Dashboard";
 import OffcanvasNav from "./OffcanvasNav";
 import Search from "./Search";
 import Wishlist from "../wishlist/Wishlist";
+import FAQ from "../faq/FAQ";
+import Shipping from "../shipping/Shipping";
+import Privacy from "../privacy/Privacy";
+import Terms from "../terms/Terms";
 
 function Navigation() {
   const [auth] = useContext(AuthContext);
@@ -78,6 +82,10 @@ function Navigation() {
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/booking-success" component={Success} />
         <Route path="/wishlist" component={Wishlist} />
+        <Route path="/faq" component={FAQ} />
+        <Route path="/shipping" component={Shipping} />
+        <Route path="/privacy" component={Privacy} />
+        <Route path="/terms-and-conditions" component={Terms} />
       </Switch>
     </ScrollToTop>
   );

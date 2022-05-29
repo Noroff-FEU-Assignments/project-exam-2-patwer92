@@ -30,7 +30,7 @@ footer {
 
     .footer__item {
       height: 12rem;
-      width: 8rem;
+      width: 9rem;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -78,7 +78,7 @@ footer {
           color: $black-color;
 
           .footer__icon {
-            width: 1.75rem;
+            font-size: 2rem;
             border: none !important;
             transition: 200ms ease-in-out;
             &:hover {

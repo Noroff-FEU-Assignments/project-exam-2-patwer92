@@ -1,0 +1,27 @@
+.shipping {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin-bottom: 10rem;
+  }
+
+  .shipping__title {
+    margin-top: 5rem;
+    width: 100%;
+    font-family: $primary-font;
+    font-size: $xl-font;
+    text-align: center;
+
+    @media (max-width: $mid-breakpoint) {
+      padding: 0 1rem !important;
+      font-size: $mid-font;
+      top: 3rem;
+    }
+  }
+
+  .main__text {
+    margin-bottom: 10rem;
+  }
+}

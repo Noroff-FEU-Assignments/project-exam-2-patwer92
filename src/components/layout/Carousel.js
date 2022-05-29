@@ -1,4 +1,4 @@
-import Carousel from "react-bootstrap/Carousel";
+import { Carousel, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function HomeCarousel() {
@@ -8,20 +8,22 @@ export default function HomeCarousel() {
         <img
           className="d-block w-100 carousel__img carousel_img--first"
           src="images/home-slide1.jpg"
-          alt="First slide"
+          alt="Nærbilde av ansikt til kvinne som får ansiktsbehandling"
         />
-        <Carousel.Caption className="carousel__caption">
-          <h2 className="carousel__caption-title">Vi hjelper deg med dine hudpleierutiner</h2>
-          <a href="#main__first-carousel" className="btn btn--primary mt-4">
-            LES MER
-          </a>
-        </Carousel.Caption>
+        <Container fluid>
+          <Carousel.Caption className="carousel__caption">
+            <h2 className="carousel__caption-title">Vi hjelper deg med dine hudpleierutiner</h2>
+            <a href="#main__first-carousel" className="btn btn--primary mt-4">
+              LES MER
+            </a>
+          </Carousel.Caption>
+        </Container>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100 carousel__img carousel__img--second"
           src="images/home-slide2.jpg"
-          alt="Second slide"
+          alt="Nærbilde av ansikt til kvinne som blir sminket"
         />
 
         <Carousel.Caption className="carousel__caption">
@@ -35,7 +37,7 @@ export default function HomeCarousel() {
         <img
           className="d-block w-100 carousel__img carousel__img--third"
           src="images/home-slide3.jpg"
-          alt="Third slide"
+          alt="Gua sha produkter og håndkrem liggende på en rosa pute"
         />
 
         <Carousel.Caption className="carousel__caption">

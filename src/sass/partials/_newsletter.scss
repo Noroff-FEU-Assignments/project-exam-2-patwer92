@@ -39,17 +39,18 @@
     }
 
     .newsletter__form {
-      padding-bottom: 3rem;
+      padding-bottom: 2rem;
       width: 25rem;
 
       @media (max-width: $mid-breakpoint) {
         width: 19rem;
       }
 
-      #floatingInputCustom {
-        border-radius: 0.5rem;
-        border: none;
+      .newsletter__input {
+        border-radius: 0.5rem !important;
+        border: none !important;
       }
+
       .newsletter__button {
         width: 100%;
         height: 3.25rem;
@@ -57,6 +58,19 @@
 
         &:hover {
           background: $secondary-color !important;
+        }
+      }
+
+      .newsletter__success {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background: $green-color;
+
+        .newsletter__success-msg {
+          margin: 0;
+          text-align: center;
+          color: $success-color;
         }
       }
     }

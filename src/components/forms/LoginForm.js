@@ -74,7 +74,7 @@ function LoginForm() {
             {errors.password && <FormError>{errors.password.message}</FormError>}
           </FloatingLabel>
           <Button className="btn btn--secondary login__button mt-3" type="submit">
-            {submitting ? "Logging in..." : "Login"}
+            {submitting ? "LOGGER INN..." : "LOGG INN"}
           </Button>
         </fieldset>
       </form>
