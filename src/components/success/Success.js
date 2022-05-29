@@ -4,10 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../layout/Footer";
 import { Container } from "react-bootstrap";
+import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 
 function Success() {
   return (
     <>
+      <ScrollToTopBtn />
       <Container fluid>
         <main className="success">
           <h2 className="success__title">Booking gjennomført</h2>

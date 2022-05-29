@@ -4,10 +4,12 @@ import Heading from "../layout/Heading";
 import FeaturedTreatments from "../fetch/FeaturedTreatmentList";
 import FeaturedProducts from "../fetch/FeaturedProductList";
 import Footer from "../layout/Footer";
+import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 
 function Home() {
   return (
     <>
+      <ScrollToTopBtn />
       <Carousel className="carousel" />
       <Container fluid>
         <Heading title="Vi tar med oss hudklinikken hjem til deg - helt enkelt!" />

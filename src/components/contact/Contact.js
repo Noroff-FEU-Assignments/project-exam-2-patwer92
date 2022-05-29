@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 import ContactForm from "../forms/ContactForm";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
@@ -7,6 +8,7 @@ import Heading from "../layout/Heading";
 function Contact() {
   return (
     <>
+      <ScrollToTopBtn />
       <Container fluid>
         <section className="contact">
           <h2 className="contact__title">Kontakt oss</h2>

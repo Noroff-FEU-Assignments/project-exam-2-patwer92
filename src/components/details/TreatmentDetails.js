@@ -4,6 +4,7 @@ import { BASE_URL } from "../../constants/api";
 import TreatmentDetailsItem from "./TreatmentDetailsItem";
 import Footer from "../layout/Footer";
 import Loading from "../common/Loading";
+import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 
 function TreatmentDetails() {
   const [treatments, setTreatments] = useState(null);
@@ -59,6 +60,7 @@ function TreatmentDetails() {
 
   return (
     <>
+      <ScrollToTopBtn />
       <TreatmentDetailsItem title={title} price={price} text={description} image={image.url} />
       <Footer />
     </>

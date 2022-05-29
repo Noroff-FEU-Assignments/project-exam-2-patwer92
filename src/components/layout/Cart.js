@@ -25,7 +25,7 @@ export default function Cart() {
             <FontAwesomeIcon icon={faShoppingBag} className="cart__icon" />
             <p className="cart__text">Handlekurven er tom</p>
           </div>
-          <Link to="/products" className="btn cart__button">
+          <Link to="/products" className="btn cart__button" onClick={handleCloseCart}>
             GÅ TIL BUTIKK
           </Link>
         </Offcanvas.Body>

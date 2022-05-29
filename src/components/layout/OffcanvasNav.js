@@ -31,32 +31,32 @@ export default function OffcanvasNav() {
         <Offcanvas.Body>
           <Nav className="justify-content-end align-items-center flex-grow-1 pe-3">
             <h2 className="nav__heading">BUTIKK</h2>
-            <Link to="/treatments" className="nav__link">
+            <Link to="/treatments" className="nav__link" onClick={handleClose}>
               Behandlinger
             </Link>
-            <Link to="/products" className="nav__link">
+            <Link to="/products" className="nav__link" onClick={handleClose}>
               Produkter
             </Link>
             <h2 className="nav__heading">GENERELT</h2>
-            <Link to="/about" className="nav__link">
+            <Link to="/about" className="nav__link" onClick={handleClose}>
               Om oss
             </Link>
-            <Link to="/contact" className="nav__link">
+            <Link to="/contact" className="nav__link" onClick={handleClose}>
               Kontakt oss
             </Link>
             {auth ? (
-              <Link to="/dashboard" className="nav__link">
+              <Link to="/dashboard" className="nav__link" onClick={handleClose}>
                 Kontrollpanel
               </Link>
             ) : (
               ""
             )}
             {auth ? (
-              <Link to="/" className="nav__link">
+              <Link to="/" className="nav__link" onClick={handleClose}>
                 <button onClick={logout}>Logg ut</button>
               </Link>
             ) : (
-              <Link to="/login" className="nav__link">
+              <Link to="/login" className="nav__link" onClick={handleClose}>
                 Logg inn
               </Link>
             )}

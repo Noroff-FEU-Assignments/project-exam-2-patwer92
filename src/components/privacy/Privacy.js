@@ -1,10 +1,12 @@
 import { Container } from "react-bootstrap";
+import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
 
 function Privacy() {
   return (
     <>
+      <ScrollToTopBtn />
       <Container fluid>
         <main className="privacy">
           <h2 className="privacy__title">Personvern</h2>

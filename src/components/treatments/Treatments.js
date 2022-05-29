@@ -4,10 +4,12 @@ import Heading from "../layout/Heading";
 import Hero from "../layout/Hero";
 import Infobox from "../layout/Infobox";
 import TreatmentsList from "../fetch/TreatmentList";
+import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 
 function Treatments() {
   return (
     <>
+      <ScrollToTopBtn />
       <Hero
         title="Vi bringer hudklinikken hjem til deg"
         image="images/hero-treatments.jpg"

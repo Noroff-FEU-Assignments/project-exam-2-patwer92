@@ -4,10 +4,12 @@ import Heading from "../layout/Heading";
 import Hero from "../layout/Hero";
 import ProductsList from "../fetch/ProductList";
 import Infobox from "../layout/Infobox";
+import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 
 function Products() {
   return (
     <>
+      <ScrollToTopBtn />
       <Hero
         title="Sjekk ut våre nyeste ansiktsmasker"
         image="images/hero-products.jpg"

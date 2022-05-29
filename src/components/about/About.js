@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
 import Hero from "../layout/Hero";
@@ -6,6 +7,7 @@ import Hero from "../layout/Hero";
 function About() {
   return (
     <>
+      <ScrollToTopBtn />
       <Hero
         title="Om oss"
         subtext="Hei, så hyggelig du tok deg tid til å besøke siden vår!"

@@ -1,10 +1,12 @@
 import { Container } from "react-bootstrap";
+import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
 
 function Terms() {
   return (
     <>
+      <ScrollToTopBtn />
       <Container fluid>
         <main className="terms">
           <h2 className="terms__title">Kjøpsvilkår</h2>

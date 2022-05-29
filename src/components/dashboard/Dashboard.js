@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { Tabs, Tab, Accordion } from "react-bootstrap";
+import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 import CreateTreatment from "../create/CreateTreatment";
 import AdminBookingList from "../fetch/AdminBookingList";
 import AdminContactList from "../fetch/AdminContactList";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
-// import Test from "../create/Test";
 
 function Dashboard() {
   const [key, setKey] = useState("0");
   return (
     <>
+      <ScrollToTopBtn />
       <Container fluid>
         <main className="admin">
           <h2 className="admin__title">Kontrollpanel</h2>

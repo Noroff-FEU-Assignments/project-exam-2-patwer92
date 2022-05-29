@@ -2,10 +2,12 @@ import { Container } from "react-bootstrap";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
 import LoginForm from "../forms/LoginForm";
+import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 
 function Login() {
   return (
     <>
+      <ScrollToTopBtn />
       <Container fluid>
         <section className="login">
           <h2 className="login__title">Logg inn</h2>

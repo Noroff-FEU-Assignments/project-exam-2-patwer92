@@ -1,10 +1,12 @@
 import { Container } from "react-bootstrap";
+import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
 
 function FAQ() {
   return (
     <>
+      <ScrollToTopBtn />
       <Container fluid>
         <main className="faq">
           <h2 className="faq__title">Spørsmål og svar</h2>

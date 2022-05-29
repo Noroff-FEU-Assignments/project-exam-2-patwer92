@@ -4,6 +4,7 @@ import { BASE_URL } from "../../constants/api";
 import ProductDetailsItem from "./ProductDetailsItem";
 import Footer from "../layout/Footer";
 import Loading from "../common/Loading";
+import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 
 function ProductDetails() {
   const [products, setProduct] = useState(null);
@@ -59,6 +60,7 @@ function ProductDetails() {
 
   return (
     <>
+      <ScrollToTopBtn />
       <ProductDetailsItem
         title={title}
         price={price}

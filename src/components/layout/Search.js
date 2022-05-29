@@ -84,6 +84,9 @@ export default function Search() {
                   onChangeHandler(e.target.value);
                   searchItems(e.target.value);
                 }}
+                onKeyDown={(e) => {
+                  searchItems(e.target.value);
+                }}
               />
             </Form>
             <div className="search__suggestions">
