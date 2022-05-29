@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Container, Breadcrumb } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +11,9 @@ import CreateBooking from "../create/CreateBooking";
 function TreatmentDetailsItem({ title, price, text, image }) {
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | {title}</title>
+      </Helmet>
       <Container fluid>
         <section className="details">
           <div className="details__container">

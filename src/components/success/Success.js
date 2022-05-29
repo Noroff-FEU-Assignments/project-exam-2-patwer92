@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
-import Heading from "../layout/Heading";
+import { Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet";
 import Footer from "../layout/Footer";
-import { Container } from "react-bootstrap";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
+import Heading from "../layout/Heading";
 
 function Success() {
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | Booking sukksess</title>
+      </Helmet>
       <ScrollToTopBtn />
       <Container fluid>
         <main className="success">

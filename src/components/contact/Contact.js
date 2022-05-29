@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 import ContactForm from "../forms/ContactForm";
@@ -8,6 +9,13 @@ import Heading from "../layout/Heading";
 function Contact() {
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | Kontakt oss</title>
+        <meta
+          name="description"
+          content="På denne siden kan du kontakte oss på e-post eller sende oss en melding via kontaktskjema"
+        ></meta>
+      </Helmet>
       <ScrollToTopBtn />
       <Container fluid>
         <section className="contact">

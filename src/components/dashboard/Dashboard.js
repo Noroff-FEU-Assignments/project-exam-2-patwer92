@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import { Tabs, Tab, Accordion } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 import CreateTreatment from "../create/CreateTreatment";
 import AdminBookingList from "../fetch/AdminBookingList";
@@ -12,6 +13,9 @@ function Dashboard() {
   const [key, setKey] = useState("0");
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | Kontrollpanel</title>
+      </Helmet>
       <ScrollToTopBtn />
       <Container fluid>
         <main className="admin">

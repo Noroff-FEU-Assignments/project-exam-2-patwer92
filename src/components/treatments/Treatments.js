@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
 import Hero from "../layout/Hero";
@@ -9,6 +10,13 @@ import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 function Treatments() {
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | Behandlinger</title>
+        <meta
+          name="description"
+          content="Hjemmehudpleie leverer hudpleie-behandlinger rett hjem til deg, så du slipper å dra til en hudpleieklinikk."
+        ></meta>
+      </Helmet>
       <ScrollToTopBtn />
       <Hero
         title="Vi bringer hudklinikken hjem til deg"

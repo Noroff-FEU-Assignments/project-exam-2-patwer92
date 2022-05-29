@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 import { Container, Breadcrumb, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,6 +29,9 @@ function ProductDetailsItem({ title, price, text, img1, img2, img3, img4 }) {
 
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | {title}</title>
+      </Helmet>
       <Container fluid>
         <section className="details">
           <div className="details__container">

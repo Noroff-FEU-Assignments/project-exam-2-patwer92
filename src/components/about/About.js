@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
@@ -7,6 +8,13 @@ import Hero from "../layout/Hero";
 function About() {
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | Om oss</title>
+        <meta
+          name="description"
+          content="Vi er en liten gjeng fra Oslo/Viken området som spesialiserer oss innen hudpleie."
+        ></meta>
+      </Helmet>
       <ScrollToTopBtn />
       <Hero
         title="Om oss"

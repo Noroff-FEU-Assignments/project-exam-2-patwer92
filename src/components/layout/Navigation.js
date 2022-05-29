@@ -84,7 +84,7 @@ function Navigation() {
         <Route path="/wishlist" component={Wishlist} />
         <Route path="/faq" component={FAQ} />
         <Route path="/shipping" component={Shipping} />
-        <Route path="/privacy" component={Privacy} />
+        <Route path="/privacy-policy" component={Privacy} />
         <Route path="/terms-and-conditions" component={Terms} />
       </Switch>
     </ScrollToTop>

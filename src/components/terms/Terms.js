@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
@@ -6,6 +7,13 @@ import Heading from "../layout/Heading";
 function Terms() {
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | Kjøpsvilkår</title>
+        <meta
+          name="description"
+          content="På denne siden finner du våre vilkår og salgsbetingelser som er utarbeidet av Forbrukertilsynet."
+        ></meta>
+      </Helmet>
       <ScrollToTopBtn />
       <Container fluid>
         <main className="terms">

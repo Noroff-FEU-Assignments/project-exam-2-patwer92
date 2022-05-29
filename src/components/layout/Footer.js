@@ -104,7 +104,7 @@ function Footer() {
             <Link to="/faq" className="footer__link">
               Spørsmål og svar
             </Link>
-            <Link to="/privacy" className="footer__link">
+            <Link to="/privacy-policy" className="footer__link">
               Personvern
             </Link>
             <Link to="/terms-and-conditions" className="footer__link">

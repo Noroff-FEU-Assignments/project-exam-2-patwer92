@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
@@ -6,6 +7,13 @@ import Heading from "../layout/Heading";
 function Shipping() {
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | Frakt og retur</title>
+        <meta
+          name="description"
+          content="Informasjon om Hjemmehudpleies frakt og retur vilkår."
+        ></meta>
+      </Helmet>
       <ScrollToTopBtn />
       <Container fluid>
         <main className="shipping">

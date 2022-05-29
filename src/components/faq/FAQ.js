@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
@@ -6,6 +7,13 @@ import Heading from "../layout/Heading";
 function FAQ() {
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | Spørsmål og svar</title>
+        <meta
+          name="description"
+          content="På denne siden finner du vanlige spørsmål og svar til våre behandlinger og produkter."
+        ></meta>
+      </Helmet>
       <ScrollToTopBtn />
       <Container fluid>
         <main className="faq">

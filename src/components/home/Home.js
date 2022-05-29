@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import Carousel from "../layout/Carousel";
 import Heading from "../layout/Heading";
 import FeaturedTreatments from "../fetch/FeaturedTreatmentList";
@@ -9,6 +10,14 @@ import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 function Home() {
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | Hjem</title>
+        <meta
+          name="description"
+          content="Hjemmehudpleie er et unikt tilbud til deg som ønsker behandling hjemme uten å dra til en
+          hudpleiesalong."
+        ></meta>
+      </Helmet>
       <ScrollToTopBtn />
       <Carousel className="carousel" />
       <Container fluid>

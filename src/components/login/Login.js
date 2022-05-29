@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
 import LoginForm from "../forms/LoginForm";
@@ -7,6 +8,9 @@ import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 function Login() {
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | Logg inn</title>
+      </Helmet>
       <ScrollToTopBtn />
       <Container fluid>
         <section className="login">

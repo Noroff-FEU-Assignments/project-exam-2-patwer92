@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import Footer from "../layout/Footer";
 import Heading from "../layout/Heading";
 import Hero from "../layout/Hero";
@@ -9,6 +10,13 @@ import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 function Products() {
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | Produkter</title>
+        <meta
+          name="description"
+          content="Hjemmehudpleie leverer kun økologiske produkter som passer til alle hudtyper."
+        ></meta>
+      </Helmet>
       <ScrollToTopBtn />
       <Hero
         title="Sjekk ut våre nyeste ansiktsmasker"

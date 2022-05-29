@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet";
 import Heading from "../layout/Heading";
 import Footer from "../layout/Footer";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
@@ -8,6 +9,9 @@ import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 function Wishlist() {
   return (
     <>
+      <Helmet>
+        <title>Hjemmehudpleie | Ønskeliste</title>
+      </Helmet>
       <ScrollToTopBtn />
       <Container fluid>
         <main className="wishlist">
