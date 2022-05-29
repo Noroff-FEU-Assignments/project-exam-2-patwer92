@@ -120,7 +120,6 @@ export default function CreateBooking({ title }) {
                       filterDate={(date) => date.getDay() !== 6 && date.getDay() !== 0}
                       placeholderText="Velg dato og klokkeslett"
                       locale="nb"
-                      // inline
                     />
                   )}
                 />
