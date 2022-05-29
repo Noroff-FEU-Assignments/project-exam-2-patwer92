@@ -1,8 +1,8 @@
 import { Container } from "react-bootstrap";
 import { Helmet } from "react-helmet";
-import Footer from "../layout/Footer";
-import Heading from "../layout/Heading";
-import LoginForm from "../forms/LoginForm";
+import Footer from "../../components/layout/Footer";
+import Heading from "../../components/layout/Heading";
+import LoginForm from "../../components/forms/LoginForm";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 
 function Login() {

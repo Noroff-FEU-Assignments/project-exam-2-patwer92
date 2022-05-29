@@ -3,11 +3,11 @@ import { Container } from "react-bootstrap";
 import { Tabs, Tab, Accordion } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
-import CreateTreatment from "../create/CreateTreatment";
-import AdminBookingList from "../fetch/AdminBookingList";
-import AdminContactList from "../fetch/AdminContactList";
-import Footer from "../layout/Footer";
-import Heading from "../layout/Heading";
+import CreateTreatment from "../../components/create/CreateTreatment";
+import AdminBookingList from "../../components/fetch/AdminBookingList";
+import AdminContactList from "../../components/fetch/AdminContactList";
+import Footer from "../../components/layout/Footer";
+import Heading from "../../components/layout/Heading";
 
 function Dashboard() {
   const [key, setKey] = useState("0");

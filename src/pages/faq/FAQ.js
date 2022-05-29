@@ -1,8 +1,8 @@
 import { Container } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
-import Footer from "../layout/Footer";
-import Heading from "../layout/Heading";
+import Footer from "../../components/layout/Footer";
+import Heading from "../../components/layout/Heading";
 
 function FAQ() {
   return (

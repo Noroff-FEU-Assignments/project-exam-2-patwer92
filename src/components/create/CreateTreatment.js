@@ -35,11 +35,7 @@ export default function CreateTreatment() {
     setSubmitting(true);
     setServerError(null);
 
-    console.log(data);
-
     const token = auth.jwt;
-
-    console.log(token);
 
     const url = `${BASE_URL}treatments`;
 
@@ -57,8 +53,8 @@ export default function CreateTreatment() {
 
     try {
       const response = await fetch(url, options);
-      const json = await response.json();
-      console.log(json);
+      await response.json();
+
       setStatus({ type: "success" });
     } catch (error) {
       setStatus({ type: "error", error });

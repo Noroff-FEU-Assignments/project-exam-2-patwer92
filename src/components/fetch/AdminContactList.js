@@ -15,7 +15,6 @@ export default function AdminContactList() {
 
         if (response.ok) {
           const json = await response.json();
-          console.log(json);
           setContacts(json);
         } else {
           setError("An error occured");

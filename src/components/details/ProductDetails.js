@@ -29,7 +29,6 @@ function ProductDetails() {
 
           if (response.ok) {
             const json = await response.json();
-            console.log(json);
             setProduct(json);
           } else {
             setError("An error occured");

@@ -49,11 +49,9 @@ function LoginForm() {
 
     try {
       const response = await axios.post(url, dataInput, options);
-      console.log("response", response.data);
       setAuth(response.data);
       history.push("/dashboard");
     } catch (error) {
-      console.log("error", error);
       setLoginError(error.toString());
     } finally {
       setSubmitting(false);

@@ -53,6 +53,7 @@ export default function CreateBooking({ title }) {
     register,
     handleSubmit,
     control,
+    reset,
     formState: { errors },
   } = useForm({
     mode: "onChange",
@@ -63,17 +64,14 @@ export default function CreateBooking({ title }) {
     setSubmitting(true);
     setServerError(null);
 
-    console.log(data);
-
     try {
-      const response = await http.post("bookings", data);
-      console.log("response", response.data);
+      await http.post("bookings", data);
       history.push("/booking-success");
     } catch (error) {
-      console.log("error", error);
       setServerError(error.toString());
     } finally {
       setSubmitting(false);
+      reset();
     }
   }
 

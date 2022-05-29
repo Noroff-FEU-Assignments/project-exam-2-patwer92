@@ -35,7 +35,6 @@ export default function Search() {
         return item.title.match(regex);
       });
     }
-    console.log("matches", matches);
     setSuggestions(matches);
     setText(text);
   };

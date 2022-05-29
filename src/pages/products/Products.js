@@ -1,10 +1,10 @@
 import { Container } from "react-bootstrap";
 import { Helmet } from "react-helmet";
-import Footer from "../layout/Footer";
-import Heading from "../layout/Heading";
-import Hero from "../layout/Hero";
-import ProductsList from "../fetch/ProductList";
-import Infobox from "../layout/Infobox";
+import Footer from "../../components/layout/Footer";
+import Heading from "../../components/layout/Heading";
+import Hero from "../../components/layout/Hero";
+import ProductsList from "../../components/fetch/ProductList";
+import Infobox from "../../components/layout/Infobox";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 
 function Products() {

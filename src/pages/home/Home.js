@@ -1,10 +1,10 @@
 import { Container } from "react-bootstrap";
 import { Helmet } from "react-helmet";
-import Carousel from "../layout/Carousel";
-import Heading from "../layout/Heading";
-import FeaturedTreatments from "../fetch/FeaturedTreatmentList";
-import FeaturedProducts from "../fetch/FeaturedProductList";
-import Footer from "../layout/Footer";
+import Carousel from "../../components/layout/Carousel";
+import Heading from "../../components/layout/Heading";
+import FeaturedTreatments from "../../components/fetch/FeaturedTreatmentList";
+import FeaturedProducts from "../../components/fetch/FeaturedProductList";
+import Footer from "../../components/layout/Footer";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
 
 function Home() {

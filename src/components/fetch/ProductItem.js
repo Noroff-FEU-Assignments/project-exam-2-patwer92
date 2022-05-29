@@ -5,24 +5,22 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 function ProductItem({ id, title, image, price }) {
   return (
-    <Link to={`product/details/${id}`}>
-      <figure className="card__image-block ">
-        <h2 className="card__title">{title}</h2>
-        <img className="card__image" src={image} alt="" />
-        <figcaption className="card__caption">
-          <h3 className="card__caption-title">Kr {price},-</h3>
-          <div className="card__link-wrapper">
-            <Link to={`product/details/${id}`} className="card__button btn btn--tertiary">
-              KJØP
-            </Link>
-            <Link to="/wishlist" className="card__link">
-              <p>LEGG TIL I ØNSKELISTE</p>
-              <FontAwesomeIcon icon={faHeart} className="card__icon" />
-            </Link>
-          </div>
-        </figcaption>
-      </figure>
-    </Link>
+    <figure className="card__image-block ">
+      <h2 className="card__title">{title}</h2>
+      <img className="card__image" src={image} alt="" />
+      <figcaption className="card__caption">
+        <h3 className="card__caption-title">Kr {price},-</h3>
+        <div className="card__link-wrapper">
+          <Link to={`product/details/${id}`} className="card__button btn btn--tertiary">
+            KJØP
+          </Link>
+          <Link to="/wishlist" className="card__link">
+            <p>LEGG TIL I ØNSKELISTE</p>
+            <FontAwesomeIcon icon={faHeart} className="card__icon" />
+          </Link>
+        </div>
+      </figcaption>
+    </figure>
   );
 }
 

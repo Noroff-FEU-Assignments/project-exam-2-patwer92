@@ -15,7 +15,6 @@ export default function ProductsList() {
 
         if (response.ok) {
           const json = await response.json();
-          console.log(json);
           setProducts(json);
         } else {
           setError("An error occured");

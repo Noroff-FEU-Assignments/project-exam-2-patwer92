@@ -2,9 +2,9 @@ import { Container } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
-import ContactForm from "../forms/ContactForm";
-import Footer from "../layout/Footer";
-import Heading from "../layout/Heading";
+import ContactForm from "../../components/forms/ContactForm";
+import Footer from "../../components/layout/Footer";
+import Heading from "../../components/layout/Heading";
 
 function Contact() {
   return (

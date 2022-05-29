@@ -3,9 +3,9 @@ import { Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { Helmet } from "react-helmet";
-import Footer from "../layout/Footer";
+import Footer from "../../components/layout/Footer";
 import ScrollToTopBtn from "../../utils/ScrollToTopBtn";
-import Heading from "../layout/Heading";
+import Heading from "../../components/layout/Heading";
 
 function Success() {
   return (

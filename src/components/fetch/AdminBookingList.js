@@ -16,7 +16,6 @@ export default function AdminBookingList() {
 
         if (response.ok) {
           const json = await response.json();
-          console.log(json);
           setBookings(json);
         } else {
           setError("An error occured");

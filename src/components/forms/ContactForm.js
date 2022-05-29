@@ -36,6 +36,7 @@ function ContactForm() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     mode: "onChange",
@@ -45,19 +46,18 @@ function ContactForm() {
   async function onSubmit(data, e) {
     setSubmitting(true);
     setServerError(null);
-    console.log(data);
 
     e.preventDefault();
 
     try {
-      const response = await http.post("contacts", data);
-      console.log("response", response.data);
+      await http.post("contacts", data);
       setStatus({ type: "success" });
     } catch (error) {
       setStatus({ type: "error", error });
       setServerError(error.toString());
     } finally {
       setSubmitting(false);
+      reset();
     }
   }
 
