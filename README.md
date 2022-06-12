@@ -12,8 +12,8 @@ bookings and messages from users.
 
 ## Administator Login Credentials
 
-Username: admin
-Password: Admin123
+- Username: admin
+- Password: Admin123
 
 ## Built With
 
