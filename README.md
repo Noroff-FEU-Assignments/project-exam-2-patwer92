@@ -10,7 +10,7 @@ Skin care website where users are able to search, order treatments and send a co
 message. Administrators is able to log in, create treatments and browse through
 bookings and messages from users.
 
-## Administator Login Credentials
+## Admin Login Credentials
 
 - Username: admin
 - Password: Admin123
